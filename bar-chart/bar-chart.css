@@ -1,0 +1,33 @@
+body {
+    background-color: #586e72;
+}
+#container {
+    height: max-content;
+    width: max-content;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    display: block;
+    margin: 100px auto;
+}
+
+g {
+    font-size: 12px;
+}
+
+.bar:hover {
+    fill: whitesmoke;
+}
+
+#tooltip {
+    position: absolute;
+    box-shadow: 1px 1px 4px #232424, -1px -1px 4px #232424;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    padding: 2px;
+    font-size: 13px;
+    background: lightsteelblue;
+    border: 0;
+    border-radius: 3px;
+    color: #232424;
+}
