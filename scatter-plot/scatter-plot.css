@@ -1,0 +1,35 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+#container {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    display: block;
+    margin: 100px auto;
+    width: max-content;
+    height: max-content;
+}
+
+.dot {
+    /* fill: lightblue; */
+    stroke: black;
+}
+
+svg {
+    position: relative;
+    left: 40px;
+}
+
+#tooltip {
+    position: absolute;
+    /* box-shadow: 1px 1px 4px #232424, -1px -1px 4px #232424; */
+    text-align: left;
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    font-size: 13px;
+    background: lightsteelblue;
+    border: 0;
+    border-radius: 5px;
+    color: #232424;
+}
