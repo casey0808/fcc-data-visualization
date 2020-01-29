@@ -1,0 +1,33 @@
+body {
+    background-color: #586e72;
+}
+
+#container {
+    height: max-content;
+    width: max-content;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    display: block;
+    margin: 50px auto;
+}
+
+#tooltip {
+    position: absolute;
+    box-shadow: 1px 1px 4px #232424, -1px -1px 4px #232424;
+    text-align: center;
+    width: 80px;
+    height: 50px;
+    padding: 5px;
+    font-size: 13px;
+    background: lightsteelblue;
+    border: 0;
+    border-radius: 3px;
+    color: #232424;
+}
+
+#x-axis {
+    font-size: 12px;
+}
+#y-axis {
+    font-size: 12px;
+}
