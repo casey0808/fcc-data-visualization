@@ -102,11 +102,19 @@ $(document).ready(function(){
             // add title   
             svg.append("text")
                .attr("x", (w/2))
-               .attr("y", (padding-30))
+               .attr("y", (padding - 50))
                .attr("text-anchor", "middle")
                .attr("id", "title")
-               .style("font-size", "24px")
+               .style("font-size", "26px")
                .text("Monthly Global Land-Surface Temperature")
+
+            svg.append("text")
+               .attr("x", (w/2))
+               .attr("y", (padding - 20))
+               .attr("text-anchor", "middle")
+               .attr("id", "subtitle")
+               .style("font-size", "18px")
+               .text("1753 - 2015: base temperature 8.66 °C")
 
         }
     })

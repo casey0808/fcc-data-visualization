@@ -1,12 +1,13 @@
 body {
-    background-color: #586e72;
+    /* background-color: #586e72; */
+    background-color: whitesmoke;
 }
 
 #container {
     height: max-content;
     width: max-content;
     background-color: whitesmoke;
-    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    /* box-shadow: 2px 2px 5px black, -2px -2px 5px black; */
     display: block;
     margin: 50px auto;
 }
