@@ -68,8 +68,8 @@ $(document).ready(function(){
                .on("mouseover", function(d){
                     tooltip.style("display", "block")
                            .attr("data-year", d.Year)
-                    tooltip.html(d.year + " - " + d.monthName + "</br>" + formatNum(d.variance + basetemp) + "°C" 
-                            + "</br>" + formatNum(d.variance) + "°C")
+                    tooltip.html(d.year + " " + d.monthName + "</br>" + "Temp: " + formatNum(d.variance + basetemp) + "°C" 
+                            + "</br>" + "Var: " + formatNum(d.variance) + "°C")
                            .style("left", (d3.event.pageX + 16) + "px")
                            .style("top", (d3.event.pageY) + "px")
                 })
