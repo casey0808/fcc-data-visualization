@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $.getJSON({
-        url: "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/global-temperature.json",
+        // url: "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/global-temperature.json",
+        url:"global-temperature.json",
         success: function(result){
             const basetemp = result.baseTemperature;
             const dataset = result.monthlyVariance;
