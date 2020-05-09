@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $.getJSON({
-        url: "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json",
+        // url: "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json",
+        url: "GDP-data.json",
         success: function(result) {
             const dataset = result.data;
             // parse the date
