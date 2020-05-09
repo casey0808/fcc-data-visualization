@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $.getJSON({
-        url: "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json",
+        // url: "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json",
+        url:"cyclist-data.json",
         success: function(dataset){
 
             // parse time
