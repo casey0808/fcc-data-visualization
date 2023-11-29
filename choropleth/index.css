@@ -1,0 +1,22 @@
+html {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+#main {
+	height: max-content;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.county-boundary {
+	stroke: white;
+	stroke-width: 0.5px;
+}
+
+#title {
+	font-size: 30px;
+	text-anchor: middle;
+}
