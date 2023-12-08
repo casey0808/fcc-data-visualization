@@ -4,3 +4,4 @@
 - [Scatter Plot](http://casey0808.github.io/fcc-data-visualization/scatter-plot)
 - [Heat Map](http://casey0808.github.io/fcc-data-visualization/heat-map)
 - [Choropleth](https://casey0808.github.io/fcc-data-visualization/choropleth/)
+- [Treemap](https://cancui.work/fcc-data-visualization/treemap/)
