@@ -1,38 +1,46 @@
 html {
-	height: 100vh;
-	width: 100vw;
-	overflow: hidden;
-	font-family: Arial, Helvetica, sans-serif;
-}
-#main {
-	height: max-content;
-	width: 100vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+.header {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  translate: -60% 0;
+  text-align: center;
+}
 #title {
-	font-size: 42px;
-	margin-bottom: 10px;
-	font-weight: 700;
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 #description {
-	font-size: 14px;
+  font-size: 14px;
+}
+
+#main {
+  height: max-content;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #tooltip {
-	font-size: 12px;
-	background-color: rgba(255, 255, 204, 0.9);
-	padding: 10px;
-	border-radius: 2px;
-	max-width: 200px;
+  font-size: 12px;
+  background-color: rgba(255, 255, 204, 0.9);
+  padding: 10px;
+  border-radius: 2px;
+  max-width: 200px;
 }
 
 #legend {
-	display: flex;
-	flex-wrap: wrap;
-	width: 500px;
-	font-size: 11px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  font-size: 11px;
 }

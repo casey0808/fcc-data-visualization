@@ -40,22 +40,23 @@ async function DrawMap() {
     .attr("height", height);
 
   // title
-  svg
-    .append("text")
-    .attr("x", width / 2)
-    .attr("y", 60)
-    .attr("id", "title")
-    .attr("text-anchor", "middle")
-    .text("Movie Sales");
+  // svg
+  // .select("#title")
+  //   .append("div")
+  //   .attr("x", width / 2)
+  //   .attr("y", 60)
+  //   .attr("id", "title")
+  //   .attr("text-anchor", "middle")
+  //   .text("Movie Sales");
 
   // description
-  svg
-    .append("text")
-    .attr("x", width / 2)
-    .attr("y", 90)
-    .attr("id", "description")
-    .attr("text-anchor", "middle")
-    .text(`Top 100 Highest Grossing Movies Grouped By Genre`);
+  // svg
+  //   .append("text")
+  //   .attr("x", width / 2)
+  //   .attr("y", 90)
+  //   .attr("id", "description")
+  //   .attr("text-anchor", "middle")
+  //   .text(`Top 100 Highest Grossing Movies Grouped By Genre`);
 
   // Add a cell for each leaf of the hierarchy.
   const leaf = svg
