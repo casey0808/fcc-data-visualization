@@ -13,13 +13,13 @@ html {
 }
 
 #title {
-	font-size: 45px;
+	font-size: 42px;
 	margin-bottom: 10px;
 	font-weight: 700;
 }
 
 #description {
-	padding-bottom: 24px;
+	font-size: 14px;
 }
 
 #tooltip {
@@ -34,5 +34,5 @@ html {
 	display: flex;
 	flex-wrap: wrap;
 	width: 500px;
-	font-size: 12px;
+	font-size: 11px;
 }
