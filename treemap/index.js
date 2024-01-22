@@ -1,19 +1,20 @@
 async function DrawMap() {
-  const [videoGameRes, movieSalesRes, kickstarterRes] = await Promise.all([
-    fetch(
-      "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/video-game-sales-data.json"
-    ),
-    fetch(
-      "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json"
-    ),
-    fetch(
-      "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/kickstarter-funding-data.json"
-    ),
-  ]);
+  // const [videoGameRes, movieSalesRes, kickstarterRes] = await Promise.all([
+  //   fetch(
+  //     "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/video-game-sales-data.json"
+  //   ),
+  //   fetch(
+  //     "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json"
+  //   ),
+  //   fetch(
+  //     "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/kickstarter-funding-data.json"
+  //   ),
+  // ]);
+  const movieSales = await d3.json("https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json");
 
-  const videoGameSales = await videoGameRes.json();
-  const movieSales = await movieSalesRes.json();
-  const kickstarterPledges = await kickstarterRes.json();
+  // const videoGameSales = await videoGameRes.json();
+  // const movieSales = await movieSalesRes.json();
+  // const kickstarterPledges = await kickstarterRes.json();
 
   const width = 1060;
   const height = 900;
