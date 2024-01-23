@@ -10,7 +10,8 @@ async function DrawMap() {
   //     "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/kickstarter-funding-data.json"
   //   ),
   // ]);
-  const movieSales = await d3.json("https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json");
+  // const movieSales = await d3.json("https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json");
+  const movieSales = await d3.json("./movie.json");
 
   // const videoGameSales = await videoGameRes.json();
   // const movieSales = await movieSalesRes.json();

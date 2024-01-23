@@ -1,12 +1,17 @@
 // import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7/+esm';
 
 async function DrawMap() {
+  // const educationData = await d3.json(
+  //   "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/for_user_education.json"
+  // );
+
+  // const countyDataOriginal = await d3.json(
+  //   "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json"
+  // );
   const educationData = await d3.json(
-    "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/for_user_education.json"
+    "./education.json"
   );
-  const countyDataOriginal = await d3.json(
-    "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json"
-  );
+  const countyDataOriginal = await d3.json("./counties.json");
 
   const countyData = topojson.feature(
     countyDataOriginal,
