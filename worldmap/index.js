@@ -1,14 +1,15 @@
 async function DrawMap() {
   const populationData = (
     await d3.csv(
-      "https://gist.githubusercontent.com/curran/0ac4077c7fc6390f5dd33bf5c06cb5ff/raw/605c54080c7a93a417a3cea93fd52e7550e76500/UN_Population_2019.csv"
+      // "https://gist.githubusercontent.com/curran/0ac4077c7fc6390f5dd33bf5c06cb5ff/raw/605c54080c7a93a417a3cea93fd52e7550e76500/UN_Population_2019.csv"
+      "./population.csv"
     )
   ).map((d) => {
-    const population = d["2020"];
+    const population = d.Last;
     return {
-      country: d["Country"],
+      country: d.Country,
       population: Number(population),
-      id: d["Country code"],
+      id: d.Country
     };
   });
   const countryDataOriginal = await d3.json("./countries-100m.json");
@@ -51,8 +52,9 @@ async function DrawMap() {
   //   .attr("transform", "translate(1/2, " + 100 + ")");
 
   // Creating counties layer
-  svg.append("g")
-    .attr('id', 'countries')
+  svg
+    .append("g")
+    .attr("id", "countries")
     .selectAll("path")
     .data(countryData.features)
     .enter()
@@ -96,7 +98,11 @@ async function DrawMap() {
   d3.selectAll("#country")
     .on("mouseover", function (event, data) {
       const populationInfo = populationData.find(
-        (d) => d.country.toLowerCase() === data.properties.name.toLowerCase()
+        (d) =>
+          d.country.toLowerCase().indexOf(data.properties.name.toLowerCase()) >
+            -1 ||
+          data.properties.name.toLowerCase().indexOf(d.country.toLowerCase()) >
+            -1
       );
       if (populationInfo) {
         return tooltip
@@ -104,7 +110,7 @@ async function DrawMap() {
           .style("left", event.pageX + 10 + "px")
           .style("top", event.pageY - 35 + "px")
           .attr("data-population", populationInfo.population)
-          .text(`${populationInfo.country}: ${populationInfo.population}`);
+          .text(`${populationInfo.country}: ${populationInfo.population} million`);
       }
     })
     .on("mouseout", function () {
