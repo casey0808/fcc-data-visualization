@@ -28,7 +28,7 @@ async function DrawMap() {
   const width = 1280;
   const height = 1000;
 
-  const pathGenerator = d3.geoPath().projection(d3.geoEquirectangular());
+  const pathGenerator = d3.geoPath().projection(d3.geoNaturalEarth1());
 
   const graticule = d3.geoGraticule10();
 
@@ -55,7 +55,7 @@ async function DrawMap() {
 
   svg
     .append("path")
-    .attr("d", (d) => pathGenerator(graticule))
+    .attr("d", () => pathGenerator(graticule))
     .attr("fill", "none")
     .attr("stroke", "lightgray");
 
@@ -115,8 +115,8 @@ async function DrawMap() {
       if (populationInfo) {
         return tooltip
           .style("visibility", "visible")
-          .style("left", event.pageX - 80 + "px")
-          .style("top", event.pageY - 80 + "px")
+          .style("left", event.pageX - 220 + "px")
+          .style("top", event.pageY - 100 + "px")
           .attr("data-population", populationInfo.population)
           .text(
             `${populationInfo.country}: ${populationInfo.population} million`

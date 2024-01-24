@@ -3,14 +3,15 @@ html {
   width: 100vw;
   overflow: hidden;
 	font-family: 'Lato', Georgia, 'Times New Roman', Times, serif;
+  position: relative;
 }
 #main {
   height: max-content;
-  width: 100vw;
+  width: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
-	transform: translate(100px, 30px);
+	transform: translate(225px, 50px);
 }
 
 #title {
