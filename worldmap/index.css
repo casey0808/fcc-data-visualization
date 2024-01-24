@@ -10,6 +10,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+	transform: translate(100px, 30px);
 }
 
 #title {
@@ -24,9 +25,8 @@ svg {
   margin: auto;
 }
 
-#countries {
-  transform: translate(100px, 30px);
-}
+/* #countries {
+} */
 
 #legend {
   font-size: 12px;

@@ -9,7 +9,7 @@ async function DrawMap() {
     return {
       country: d.Country,
       population: Number(population),
-      id: d.Country
+      id: d.Country,
     };
   });
   const countryDataOriginal = await d3.json("./countries-100m.json");
@@ -29,6 +29,8 @@ async function DrawMap() {
   const height = 1000;
 
   const pathGenerator = d3.geoPath().projection(d3.geoEquirectangular());
+
+  const graticule = d3.geoGraticule10();
 
   // const colors = d3
   //   .scaleLinear()
@@ -50,6 +52,12 @@ async function DrawMap() {
   // const g = svg
   //   .append("g")
   //   .attr("transform", "translate(1/2, " + 100 + ")");
+
+  svg
+    .append("path")
+    .attr("d", (d) => pathGenerator(graticule))
+    .attr("fill", "none")
+    .attr("stroke", "lightgray");
 
   // Creating counties layer
   svg
@@ -107,10 +115,12 @@ async function DrawMap() {
       if (populationInfo) {
         return tooltip
           .style("visibility", "visible")
-          .style("left", event.pageX + 10 + "px")
-          .style("top", event.pageY - 35 + "px")
+          .style("left", event.pageX - 80 + "px")
+          .style("top", event.pageY - 80 + "px")
           .attr("data-population", populationInfo.population)
-          .text(`${populationInfo.country}: ${populationInfo.population} million`);
+          .text(
+            `${populationInfo.country}: ${populationInfo.population} million`
+          );
       }
     })
     .on("mouseout", function () {
