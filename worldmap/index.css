@@ -2,8 +2,9 @@ html {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-	font-family: 'Lato', Georgia, 'Times New Roman', Times, serif;
+  font-family: "Lato", Georgia, "Times New Roman", Times, serif;
   position: relative;
+  /* background: whitesmoke; */
 }
 #main {
   height: max-content;
@@ -11,7 +12,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-	transform: translate(225px, 50px);
+  transform: translate(225px, 50px);
 }
 
 #title {
@@ -38,4 +39,10 @@ svg {
   background-color: rgba(255, 255, 204, 0.9);
   padding: 10px;
   border-radius: 2px;
+}
+
+.return {
+  position: absolute;
+  top: 10px;
+  left: 20px;
 }
